@@ -112,7 +112,11 @@ const App = () => {
       let newagility=agility-currentFighter.agility
       let newstrength=strength-currentFighter.strength
 
-      team.pop(currentFighter)
+   
+      const index = team.indexOf(currentFighter)
+
+      team.splice(index,1)
+      
     setMoney(newmoney)
     setTotalAgility(newagility)
     setTotalStrength(newstrength)
